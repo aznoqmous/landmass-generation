@@ -15,7 +15,7 @@ const gui = new GUI({ width: 340 })
 const debugObject = {
     color: '#000000',
     topColor: '#fea37c',
-    fogColor: '#ffffff',
+    fogColor: '#b2a4a4',
 }
 
 // Canvas

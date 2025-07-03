@@ -36,9 +36,10 @@ void main()
     float fogDistance = clamp(1.0 - distance(uCameraPosition, vPosition) / uFogMaxDistance, 0.0, 1.0);
 
     // clouds
-    lit *= clamp(fbm(vPosition.xz / 2.0 + vec2(uTime / 5.0, 1.0)).x + vec3(0.5), 0.6, 1.5);
+    lit *= clamp(fbm(vPosition.xz / 2.0 + vec2(uTime / 45.0, uTime / 55.0)).x * 10.0, 0.6, 1.0);
     
+    lit = pow(lit, vec3(2.2)) * 1.5 + lit;
     lit = mix(uFogColor, lit, fogDistance);
 
-    gl_FragColor = pow(vec4(lit, 1.0), vec4(2.2)) + vec4(lit, 1.0);
+    gl_FragColor = vec4(lit, 1.0);
 }
