@@ -38,7 +38,7 @@ void main()
     // clouds
     lit *= clamp(fbm(vPosition.xz / 2.0 + vec2(uTime / 45.0, uTime / 55.0)).x * 10.0, 0.6, 1.0);
     
-    lit = pow(lit, vec3(2.2)) * 1.5 + lit;
+    lit = pow(lit, vec3(2.2)) * 2.0 + lit;
     lit = mix(uFogColor, lit, fogDistance);
 
     gl_FragColor = vec4(lit, 1.0);
