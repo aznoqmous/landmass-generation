@@ -36,7 +36,7 @@ void main()
     float fogDistance = clamp(1.0 - distance(uCameraPosition, vPosition) / uFogMaxDistance, 0.0, 1.0);
 
     // clouds
-    lit *= clamp(fbm(vPosition.xz / 2.0 + vec2(uTime / 45.0, uTime / 55.0)).x * 10.0, 0.6, 1.0);
+    lit *= clamp(fbm(vPosition.xz / 2.0 + vec2(uTime / 45.0, uTime / 55.0) + vec2(132.0, 2154.0)).x * 10.0, 0.6, 1.0);
     
     lit = pow(lit, vec3(2.2)) * 2.0 + lit;
     lit = mix(uFogColor, lit, fogDistance);

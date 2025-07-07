@@ -13,7 +13,7 @@ import birdFragmentShader from "./bird-fragment.glsl"
 // Debug
 const gui = new GUI({ width: 340 })
 const debugObject = {
-    color: '#876e6e',
+    color: '#c19f9f',
     topColor: '#fea37c',
     fogColor: '#b2a4a4',
 }
@@ -28,7 +28,7 @@ const scene = new THREE.Scene()
  * Water
  */
 // Geometry
-const waterGeometry = new THREE.PlaneGeometry(8, 8, 1024, 1024)
+const waterGeometry = new THREE.PlaneGeometry(8, 8, 256, 256)
 const textureLoader = new THREE.TextureLoader()
 // Material
 const waterMaterial = new THREE.ShaderMaterial({
